@@ -2,6 +2,7 @@ package com.library.biz.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.MockitoAnnotations;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author: Lai Haimeng
  * @date: 2023/12/14
  */
+//@ExtendWith(SpringExtension.class)
+//@ContextConfiguration
 class UserDetailsServiceImplTest {
 
     @BeforeEach
@@ -21,5 +24,8 @@ class UserDetailsServiceImplTest {
     @Test
     void loadUserByUsername() {
         //should use spring test
+
+        //yes it should
+        //@WithMockUser
     }
 }
