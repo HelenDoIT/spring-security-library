@@ -15,6 +15,6 @@ public class UserController {
 
     @GetMapping("/list")
     public String listUser(){
-        return "This is listUser";
+        return "listUser";
     }
 }

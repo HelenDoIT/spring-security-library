@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.biz.mapper.BookInfoMapper">
+
+    <resultMap id="BookInfoResult" type="com.library.common.domain.entity.BookInfo">
+        <result property="bookId" column="book_id"/>
+        <result property="name" column="name"/>
+        <result property="author" column="author"/>
+        <result property="inventory" column="inventory"/>
+        <result property="dr" column="dr"/>
+    </resultMap>
+
+    <sql id="selectBookInfo">
+        SELECT book_id,`name`,author,inventory,dr FROM book_info
+    </sql>
+
+    <select id="listAll" resultMap="BookInfoResult">
+        <include refid="selectBookInfo"></include>
+    </select>
+
+</mapper>
